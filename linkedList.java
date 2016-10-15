@@ -55,6 +55,28 @@ for (String s: names)
    first = new Node(s, first);
    }
 
+/**
+traverses the list and prints all of the elements
+*/
+
+public void print() {
+
+Node ref = first;
+while (ref!= null) {
+System.out.print(ref.value + " ");
+ref = ref.next;
+}
+}
+
+public static void main(String [] args)
+{
+linkedList 11 = new linkedList();
+String str = "The list consists of:";
+System.out.println(str);
+11.print();
+}
+}
+
 
 
 
