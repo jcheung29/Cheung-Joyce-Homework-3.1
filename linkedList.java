@@ -4,17 +4,7 @@ public class linkedList {
 //Referencing the first node in the list
 private Node first = null; 
 
-/**
-constructor
-build linked list
-*/
-
-
 public linkedList() {
-
-//incrementally build list
-//Alphabetical order of names 
-//Cherry Orange Peach Strawberry
 
 first = null;
 
@@ -31,8 +21,7 @@ else
 {
 Node pointer = first; 
 int compare = pointer.getData().compareTo(word.getData());
-if (compare == 0)
-{
+if (compare == 0) {
 
 if (pointer.getNext() == null) {
    pointer.setNext(word); 
@@ -43,6 +32,7 @@ else {
   word.setPrev(pointer);
   pointer.getNext().setPrev(word);
   pointer.setNext(word); 
+}
 }
 }
 
@@ -65,52 +55,47 @@ while (pointer.getNext() != null) {
   if (compare == 0)
 {
 
-if (pointer.getNext() == null) {
-   pointer.setNext(word); 
-   word.setPrev(pointer);
-   }
-else {
-  word.setNext(pointer.getNext());
-  word.setPrev(pointer);
-  pointer.getNext().setPrev(word);
-  pointer.setNext(word); 
-}
-}
-
-if (compare > 0) {
-  word.setNext(pointer);
-  word.setPrev(pointer.setPrev); 
-  pointer.setPrev(word);
+     if (pointer.getNext() == null) {
+         pointer.setNext(word); 
+         word.setPrev(pointer);
+         return;
+         }
+     else {
+         word.setNext(pointer.getNext());
+         word.setPrev(pointer);
+         pointer.getNext().setPrev(word);
+         pointer.setNext(word); 
+         return;
+         }
 }
 
-if (compare < 0) {
-  pointer.getNext() == null;
+     if (compare > 0) {
+        word.setNext(pointer);
+        word.setPrev(pointer.setPrev); 
+        pointer.setPrev(word);
+        return;
+        }
 
-  
-}
-
-
+     if (compare < 0) {
+        if (pointer.getNext() == null); {
+            word.setPrev(pointer);
+            pointer.setNext(word);
+            return;
+            }
+      }
 }
 }
 }
 
 public void print() {
+    Node pointer = first;
+    while (pointer!= null) {
+    System.out.print(pointer.value + " ");
+    pointer = pointer.getNext;
+    }
+}
 
-Node ref = first;
-while (ref!= null) {
-System.out.print(ref.value + " ");
-ref = ref.next;
-}
-}
 
-public static void main(String [] args)
-{
-linkedList 11 = new linkedList();
-String str = "The list consists of:";
-System.out.println(str);
-11.print();
-}
-}
 
 
 
