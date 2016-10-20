@@ -10,12 +10,12 @@ public class Node {
   }
   
   //Insert getters and setters
-  public int getData() {
+  public String getData() {
   return this.data;
   }
   
-  public void setData(int newData) {
-  this.data = new Data();
+  public void setData(String newData) {
+  this.data = newData;
   }
   
   public Node getPrev() {

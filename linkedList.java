@@ -10,8 +10,7 @@ first = null;
 
 }
 
-public void add(String node)
-{
+public void add(String node) {
 Node word = new Node(node);
 
 if (first == null)
@@ -34,7 +33,7 @@ else {
   pointer.setNext(word); 
 }
 }
-}
+
 
 if (compare > 0) {
   word.setNext(pointer);
@@ -45,7 +44,7 @@ if (compare > 0) {
 if (compare < 0) {
   if (pointer.getNext() == null) {
     pointer.setNext(word);
-    word.setprev(pointer);
+    word.setPrev(pointer);
 }
   else {
     
@@ -71,7 +70,7 @@ while (pointer.getNext() != null) {
 
      if (compare > 0) {
         word.setNext(pointer);
-        word.setPrev(pointer.setPrev); 
+        word.setPrev(pointer.getPrev()); 
         pointer.setPrev(word);
         return;
         }
@@ -86,14 +85,18 @@ while (pointer.getNext() != null) {
 }
 }
 }
-
+}
+}
 public void print() {
     Node pointer = first;
     while (pointer!= null) {
-    System.out.print(pointer.value + " ");
-    pointer = pointer.getNext;
+    System.out.print(pointer.getData() + " ");
+    pointer = pointer.getNext();
     }
 }
+}
+
+
 
 
 
