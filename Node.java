@@ -1,9 +1,9 @@
 public class Node {
-  private int data;
+  private String data;
   private Node next; // reference to successor
   private Node prev; // reference to predecessor 
   
-  Node (int x) {
+  Node (String x) {
     this.data = x;
     this.next = null;
     this.prev = null; 
@@ -15,7 +15,7 @@ public class Node {
   }
   
   public void setData(int newData) {
-  this.data = new Data;
+  this.data = new Data();
   }
   
   public Node getPrev() {
@@ -34,5 +34,7 @@ public class Node {
   this.next = newNext;
   }
   }
+
+
   
   

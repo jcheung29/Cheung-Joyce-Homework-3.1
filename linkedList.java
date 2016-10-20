@@ -1,31 +1,6 @@
 import java.util.*;
 public class linkedList {
 
-private class node {
-  String value; //element 
-  Node next; // reference to successor
-  Node prev; // reference to predecessor 
-  
-  /**
-   constructor.
-   @param val the element to store in this node.
-   @param n the reference to the next node.
-   @param p the reference to the prev node.
-   */
-  
-  Node (String val, Node n, Node p) {
-  value = val;
-  next = n;
-  prev = p;
-  }
-  
-  Node (String val) {
-  value = val;
-  next = null;
-  prev = null;
-  }
-}
-
 //Referencing the first node in the list
 private Node first = null; 
 
@@ -34,30 +9,90 @@ constructor
 build linked list
 */
 
+
 public linkedList() {
 
 //incrementally build list
 //Alphabetical order of names 
 //Cherry Orange Peach Strawberry
 
-first = new Node ("Peach");
-first.next = new Node ("Strawberry");
-first.next.next = new Node ("Orange");
-first = new Node ("Cherry", first);
+first = null;
 
-String [] names = {"Apple", "Banana"};
+}
 
-//use loop to add Apple and Banana to the front of the linked list 
-//to build the list
-//Apple Banana Cherry Orange Peach Strawberry
+public void add(String node)
+{
+Node word = new Node(node);
 
-for (String s: names)
-   first = new Node(s, first);
+if (first == null)
+    first = word; 
+    
+else 
+{
+Node pointer = first; 
+int compare = pointer.getData().compareTo(word.getData());
+if (compare == 0)
+{
+
+if (pointer.getNext() == null) {
+   pointer.setNext(word); 
+   word.setPrev(pointer);
    }
+else {
+  word.setNext(pointer.getNext());
+  word.setPrev(pointer);
+  pointer.getNext().setPrev(word);
+  pointer.setNext(word); 
+}
+}
 
-/**
-traverses the list and prints all of the elements
-*/
+if (compare > 0) {
+  word.setNext(pointer);
+  pointer.setPrev(word);
+  first = word; 
+}
+
+if (compare < 0) {
+  if (pointer.getNext() == null) {
+    pointer.setNext(word);
+    word.setprev(pointer);
+}
+  else {
+    
+while (pointer.getNext() != null) {
+  pointer = pointer.getNext();
+  
+  if (compare == 0)
+{
+
+if (pointer.getNext() == null) {
+   pointer.setNext(word); 
+   word.setPrev(pointer);
+   }
+else {
+  word.setNext(pointer.getNext());
+  word.setPrev(pointer);
+  pointer.getNext().setPrev(word);
+  pointer.setNext(word); 
+}
+}
+
+if (compare > 0) {
+  word.setNext(pointer);
+  word.setPrev(pointer.setPrev); 
+  pointer.setPrev(word);
+}
+
+if (compare < 0) {
+  pointer.getNext() == null;
+
+  
+}
+
+
+}
+}
+}
 
 public void print() {
 
@@ -76,6 +111,8 @@ System.out.println(str);
 11.print();
 }
 }
+
+
 
 
 
