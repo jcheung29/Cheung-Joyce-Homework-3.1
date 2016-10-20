@@ -14,12 +14,13 @@ public void add(String node) {
 Node word = new Node(node);
 
 if (first == null)
-    first = word; 
+    first = word;
     
 else 
 {
 Node pointer = first; 
 int compare = pointer.getData().compareTo(word.getData());
+
 if (compare == 0) {
 
 if (pointer.getNext() == null) {
@@ -76,7 +77,7 @@ while (pointer.getNext() != null) {
         }
 
      if (compare < 0) {
-        if (pointer.getNext() == null); {
+        if (pointer.getNext() == null) {
             word.setPrev(pointer);
             pointer.setNext(word);
             return;

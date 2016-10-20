@@ -5,10 +5,10 @@ public class Main {
       L1List.add("Apple");
       L1List.add("Banana");
       L1List.add("Cherry");
-      L1List.print();
-      
-      
-        
+      L1List.add("Orange");
+      L1List.add("Rasberry");
+      L1List.add("Peach");
+      L1List.print();  
       
   }
 }
