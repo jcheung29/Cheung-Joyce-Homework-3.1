@@ -1,3 +1,10 @@
+/**
+ * Joyce Cheung
+ * ICSI 213
+ * Dr. Magnus
+ * Assignment 3.2
+ **/
+
 public class Main {
   
   public static void main(String [] arg) {

@@ -3,10 +3,12 @@ public class linkedList {
 
 //Referencing the first node in the list
 private Node first = null; 
+private Node last = null;
 
 public linkedList() {
 
 first = null;
+last = null;
 
 }
 
@@ -84,40 +86,22 @@ while (pointer.getNext() != null) {
             pointer.setNext(word);
             return;
             }
-      }
+      }  
 }
 }
 }
-}
-}
-public void print() {
-    Node pointer = first;
-    while (pointer!= null) {
-    System.out.print(pointer.getData() + " ");
-    pointer = pointer.getNext();
-    }
 }
 }
 
-public class linkedList {
+public void sub(String node) { 
+Node pointer = new Node(node);
 
-//Referencing the first node in the list
-private Node last = null; 
-
-public linkedList() {
-
-last = null;
-
-}
-
-public void add(String node) {
-Node word = new Node(node);
-if (last == null)
+  if (last == null)
     last = pointer;
     
 else 
 {
-Node word = pointer; 
+Node word = first; 
 int compare = word.getData().compareTo(pointer.getData());
 
 if (compare == 0) {
@@ -159,6 +143,7 @@ while (word.getNext() != null) {
          pointer.setPrev(word);
          return;
          }
+     
      else {
          pointer.setNext(word.getNext());
          pointer.setPrev(word);
@@ -184,18 +169,28 @@ while (word.getNext() != null) {
             }
       }
 }
+  }
 }
 }
 }
 
-public void backward() {
-    Node pointer = last;
-    while (pointer!= null) {
+public void forward() {
+    Node pointer = first;
+    while (pointer.getNext() != null) {
     System.out.print(pointer.getData() + " ");
-    pointer = pointer.getPrev(); 
+    pointer = pointer.getNext();
+    }
+}
+    public void backward() {
+    Node word = first;
+    while (word.getPrev() != null) {
+    System.out.print(word.getData() + " ");
+    word = word.getPrev(); 
     }
 }
 }
+
+
 
 
 

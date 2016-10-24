@@ -8,7 +8,8 @@ public class Main {
       L1List.add("Cherry");
       L1List.add("Orange");
       L1List.add("Peach");
-      L1List.print();  
+      L1List.forward();  
+      L1List.backward();
       
   }
 }

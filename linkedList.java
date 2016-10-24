@@ -1,3 +1,10 @@
+/**
+ * Joyce Cheung
+ * ICSI 213
+ * Dr. Magnus
+ * Assignment 3.2
+ **/
+
 import java.util.*;
 public class linkedList {
 
@@ -173,35 +180,6 @@ while (word.getNext() != null) {
 }
 }
 }
-    public void delete(String node) {
-      Node pointer = first;
-      while (pointer != null) 
-
-      {
-        pointer = pointer.getNext();
-      }
-      
-      if (pointer.getNext == Node) {
-        Node prev = pointer.getPrev();
-        Node next = pointer.getNext();
-      }
-      
-      if (prev != null) { 
-        next.setPrev(prev);
-      }
-      else {
-        pointer = getNext;
-      }
-      
-      if (next != null) {
-        prev.setNext(next);
-      }
-      else {
-        prev.setNext(null);
-      }
-      
-
-    }
 
 public void forward() {
     Node pointer = first;
