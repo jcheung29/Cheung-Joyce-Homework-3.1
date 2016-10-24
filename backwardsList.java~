@@ -1,7 +1,0 @@
-public void backwardsList {
-  
-  private Node last = null; 
-
-public backwardsList() {
-last = null;
-}
